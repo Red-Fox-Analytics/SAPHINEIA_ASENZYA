@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: SAPHINEIA
+    schema: public
+    tables:
+      - name: SAPHINEIA_ASENZYA_SAP_INVOICES
+      - name: SAPHINEIA_ASENZYA_SAP_BALANCES
+      - name: SAPHINEIA_ASENZYA_SAP_WORK_ORDERS

@@ -10,6 +10,6 @@ WITH invoices_data AS
 			, "Volume Sales (LBs)"  "VOLUME_SALES_LB", "No of Orders" "NO_OF_ORDERS", "Dollar Sales"  "DOLLAR_SALES"
 			, "Price/Unit" "PRICE_UNIT", "Cost/LB" "COST_LB", "Price/LB" "PRICE_LB", "Cost/Unit" "COST_UNIT"
 			
-	FROM "PUBLIC".SAPHINEIA_ASENZYA_SAP_INVOICES
+	FROM {{source('SAPHINEIA','SAPHINEIA_ASENZYA_SAP_INVOICES')}}--"PUBLIC".SAPHINEIA_ASENZYA_SAP_INVOICES
 )
 SELECT * FROM invoices_data

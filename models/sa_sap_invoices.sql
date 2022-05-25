@@ -7,7 +7,7 @@ invoices_data AS
 (
 	SELECT case when "Ownership" is null then 'Not Coded' else "Ownership" end "CUSTOMER_(PARENT)" 
 			, case when "Category" is null then 'Not Coded' else "Category" end CATEGORY
-			, case when "year" is null then 'Not Coded' else "year" end "YEAR"
+			, case when cast("year" as varchar) is null then 'Not Coded' else cast("year" as varchar) end "YEAR"
 			, case when cast("Inv No" as varchar) is null then 'Not Coded' else cast("Inv No" as varchar) end "INV_NO" , "Day of Week" "DAY_OF_WEEK"
 			, case when cast("item_wgt" as varchar) is null then 'Not Coded' else cast("item_wgt" as varchar) end "ITEM_WEIGHT", "Table Names-1"  "TABLE_NAMES_1"
 			, case when "Item Description" is null then 'Not Coded' else "Item Description" end "ITEM_DESCRIPTION"

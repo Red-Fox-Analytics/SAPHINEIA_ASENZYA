@@ -16,7 +16,7 @@ invoices_data AS
 			, "date-month" "DATE_MONTH", "state" "STATE"	, "Cust No" "CUSTOMER_(CHILD)_ID", "Recipe ID" "RECIPE_ID" 
 			, "Customer Name" "CUSTOMER_(CHILD)", "Part Type"  "PART_TYPE", "File Paths" "FILE_PATHS", "Item_wgt class" "ITEM_WEIGHT_CLASS"
 			, "Ship Qty" "SHIP QTY", "Date" "DATE", UOM "UOM"
-			, case when "Item No" is null then 'Not Coded' else "Item No" end  "ITEM_NO"
+			, case when cast("Item No" as varchar) is null then 'Not Coded' else cast("Item No" as varchar) end  "ITEM_NO"
 			, "month" "MONTH"
 			, "location" "LOCATION"
 			, (Select NO_OF_ORDERS from invoices_count) NO_OF_ORDERS
